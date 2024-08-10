@@ -34,6 +34,7 @@ html {
   display: flex;
   align-items: center;
   background-color: #f34cda;
+  justify-content: space-between;
   padding: 0px;
   position: fixed;
   top: 0px;
@@ -45,6 +46,12 @@ html {
 .nav-container a, .nav-logo{ /* BINI logo */
   height:70px;
   margin:0 auto;
+}
+
+.nav-logo-container { 
+  flex: 1; 
+  display: flex;
+  justify-content: center; 
 }
 
 .nav-logo:hover{ 
@@ -100,10 +107,6 @@ html {
   color:rgb(255, 255, 255);
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
 
 .home{
   width:100%;
@@ -200,25 +203,6 @@ html {
   right: 43px;
   background-color: rgba(236, 42, 100, 0.8);
   border-radius: 20px;
-}
-
-/* button responsiveness */
-@media (max-width: 1200px) {
-  #prev, #next {
-      font-size: 36px;
-  }
-}
-
-@media (max-width: 768px) {
-  #prev, #next {
-      font-size: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  #prev, #next {
-      font-size: 20px;
-  }
 }
 
 .collage-holder {
@@ -320,7 +304,7 @@ body {
   list-style: none;
   text-align: center;
   cursor:pointer;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transform: translateY(-50%);
 }
 
@@ -371,18 +355,6 @@ body {
   margin-left: 0px;
 }
 
-
-@media screen and (max-width:900px){
-  .carousel img{
-    width: calc(100%/3);
-  }
-}
-@media screen and (max-width:550px){
-  .carousel img{
-    width: 100%;
-  }
-}
-
 .newsletter h1{
   font-size: 50px;
   font-family: "Crimson Text", serif ;
@@ -404,6 +376,7 @@ body {
 }
 
 .social-section{
+  margin-top: 3rem;
   text-align: center;
   justify-content: center;
 }
@@ -631,3 +604,173 @@ footer{
   text-align: center;
   color: #000000;
 }
+
+/* Sidenav */
+@media (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* Carousel Images */
+@media (max-width: 900px) {
+  .carousel img {
+    width: calc(100% / 3);
+  }
+}
+
+@media (max-width: 550px) {
+  .carousel img {
+    width: 100%;
+  }
+}
+
+
+/* Navbar */
+@media (max-width: 440px) {
+  .navbar {
+    padding: 5px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .navbar-logo img {
+    max-height: 40px; /* Adjust logo size for smaller screens */
+  }
+}
+
+/* Collage Section */
+@media (max-width: 440px) {
+  .collage-holder {
+    flex-direction: column;
+    align-items: center; 
+    padding: 20px 10px;
+  }
+
+  .description {
+    margin-left: 0;
+    width: 100%; 
+    text-align: center; 
+  }
+
+  .description h1 {
+    font-size: 50px; 
+  }
+
+  .description p {
+    font-size: small;
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .collage {
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .collage img {
+    flex: 1 1 100px; 
+    height: 150px;
+    width: 100%; 
+    max-width: 140px;
+  }
+}
+
+/* Slider Section */
+@media (max-width: 440px) {
+  .slider-holder {
+    display: none;
+  }
+}
+
+/* Membership Section */
+@media (max-width: 440px) {
+  .membership h2 {
+    font-size: 20px;
+    color: rgb(91, 189, 255);
+  }
+
+  .membership p {
+    font-size: small;
+    width: 80%;
+  }
+
+  .membership img {
+    width: 350px;
+    height: 300px;
+    object-fit: contain;  
+    padding-bottom: 15px;
+  }
+
+  .membership button {
+    font-size: 15px;
+  }
+
+  .membership button:hover {
+    background-color: rgba(91, 189, 255, 0.9);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); 
+  }
+}
+
+/* Event List Section */
+@media (max-width: 440px) {
+  .event-list-container {
+    width: 90%;
+    font-size: 15px;
+  }
+
+  .event-row {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .event-column {
+    flex: 1;
+    padding: 0 10px;
+  }
+}
+
+/* Newsletter Section */
+@media (max-width: 440px) {
+  .newsletter p {
+    color: #000000;
+    width: 80%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Socials Section */
+@media (max-width: 440px) {
+  .socials i {
+    font-size: 2rem;
+  }
+}
+
+/* Button Responsiveness */
+@media (max-width: 1200px) {
+  #prev, #next {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  #prev, #next {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  #prev, #next {
+    font-size: 20px;
+  }
+}
+
+
